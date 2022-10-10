@@ -21,18 +21,15 @@
 #            -Pdist time.
 #
 #
-if hadoop_verify_entry HADOOP_TOOLS_OPTIONS "hadoop-aliyun"; then
-  hadoop_add_profile "hadoop-aliyun"
+if hadoop_verify_entry HADOOP_TOOLS_OPTIONS "hadoop-azure-datalake"; then
+  hadoop_add_profile "hadoop-azure-datalake"
 fi
 
-function _hadoop-aliyun_hadoop_classpath
+function _hadoop-azure-datalake_hadoop_classpath
 {
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aliyun-sdk-oss-2.8.3.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aliyun-sdk-oss-2.8.3.jar"
+  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/azure-data-lake-store-sdk-2.2.7.jar" ]]; then
+    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/azure-data-lake-store-sdk-2.2.7.jar"
   fi
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/jdom-1.1.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/jdom-1.1.jar"
-  fi
-  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-aliyun-3.1.2.jar"
+  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-azure-datalake-3.1.2.jar"
 }
 

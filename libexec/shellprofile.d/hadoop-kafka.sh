@@ -21,18 +21,18 @@
 #            -Pdist time.
 #
 #
-if hadoop_verify_entry HADOOP_TOOLS_OPTIONS "hadoop-aliyun"; then
-  hadoop_add_profile "hadoop-aliyun"
+if hadoop_verify_entry HADOOP_TOOLS_OPTIONS "hadoop-kafka"; then
+  hadoop_add_profile "hadoop-kafka"
 fi
 
-function _hadoop-aliyun_hadoop_classpath
+function _hadoop-kafka_hadoop_classpath
 {
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aliyun-sdk-oss-2.8.3.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aliyun-sdk-oss-2.8.3.jar"
+  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/kafka-clients-0.8.2.1.jar" ]]; then
+    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/kafka-clients-0.8.2.1.jar"
   fi
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/jdom-1.1.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/jdom-1.1.jar"
+  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/lz4-1.2.0.jar" ]]; then
+    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/lz4-1.2.0.jar"
   fi
-  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-aliyun-3.1.2.jar"
+  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-kafka-3.1.2.jar"
 }
 

@@ -21,18 +21,18 @@
 #            -Pdist time.
 #
 #
-if hadoop_verify_entry HADOOP_TOOLS_OPTIONS "hadoop-aliyun"; then
-  hadoop_add_profile "hadoop-aliyun"
+if hadoop_verify_entry HADOOP_TOOLS_OPTIONS "hadoop-azure"; then
+  hadoop_add_profile "hadoop-azure"
 fi
 
-function _hadoop-aliyun_hadoop_classpath
+function _hadoop-azure_hadoop_classpath
 {
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aliyun-sdk-oss-2.8.3.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aliyun-sdk-oss-2.8.3.jar"
+  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/azure-storage-7.0.0.jar" ]]; then
+    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/azure-storage-7.0.0.jar"
   fi
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/jdom-1.1.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/jdom-1.1.jar"
+  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/azure-keyvault-core-1.0.0.jar" ]]; then
+    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/azure-keyvault-core-1.0.0.jar"
   fi
-  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-aliyun-3.1.2.jar"
+  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-azure-3.1.2.jar"
 }
 
