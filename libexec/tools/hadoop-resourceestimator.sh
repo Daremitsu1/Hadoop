@@ -22,11 +22,11 @@
 #
 #
 
-function hadoop_classpath_tools_hadoop-archive-logs
+function hadoop_classpath_tools_hadoop-resourceestimator
 {
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-archives-3.1.2.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-archives-3.1.2.jar"
+  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/ojalgo-43.0.jar" ]]; then
+    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/ojalgo-43.0.jar"
   fi
-  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-archive-logs-3.1.2.jar"
+  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-resourceestimator-3.1.2.jar"
 }
 

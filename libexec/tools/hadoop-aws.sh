@@ -22,11 +22,11 @@
 #
 #
 
-function hadoop_classpath_tools_hadoop-archive-logs
+function hadoop_classpath_tools_hadoop-aws
 {
-  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-archives-3.1.2.jar" ]]; then
-    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-archives-3.1.2.jar"
+  if [[ -f "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aws-java-sdk-bundle-1.11.271.jar" ]]; then
+    hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/aws-java-sdk-bundle-1.11.271.jar"
   fi
-  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-archive-logs-3.1.2.jar"
+  hadoop_add_classpath "${HADOOP_TOOLS_HOME}/${HADOOP_TOOLS_LIB_JARS_DIR}/hadoop-aws-3.1.2.jar"
 }
 
